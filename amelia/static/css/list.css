@@ -1,0 +1,32 @@
+#list {
+    width:              100%;
+    padding-bottom:     5px;
+    margin-left:        auto;
+    margin-right:       auto;
+    margin-top:         0px;
+}
+
+#list-title {
+    width:              100%;
+    margin-left:        auto;
+    margin-right:       auto;
+    text-align:         center;
+    font-size:          1.25em;
+}
+
+.checkitem {
+    width:              20px;
+}
+
+.list {
+    width:              50px;
+}
+
+#cnpjts {
+    position:           relative;
+    border:             1px solid gray;
+    margin:             15px;
+    padding:            10px;
+    width:              50%;
+    text-align:         left;
+} 

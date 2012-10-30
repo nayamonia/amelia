@@ -1,0 +1,65 @@
+#list {
+    width:              100%;
+    padding-bottom:     5px;
+    margin-left:        auto;
+    margin-right:       auto;
+    margin-top:         0px;
+}
+
+#list-title {
+    width:              100%;
+    margin-left:        auto;
+    margin-right:       auto;
+    text-align:         center;
+    font-size:          1.25em;
+}
+
+#pkg {
+    background:         url('../images/pkgOpac.png') no-repeat top left;
+    background-size:    20%;
+}
+
+.pkg-header {
+    margin:             0px;
+    padding-top:        5px;    
+    padding-bottom:     5px;    
+    font-size:          14px;
+    font-family:        'verdana';
+    color:              rgb(88, 99, 103);    
+    font-weight:        normal;
+    text-decoration:    none;    
+}
+
+.pkg-list {
+    caption-side:       bottom;
+    border-collapse:    collapse;
+    border-width:       0px;
+    border-spacing:     0px;   
+    padding:            0px;
+    margin-left:        auto;
+    margin-right:       auto;
+    width:              100%;    
+}
+
+.pkg-list-data {
+    display:            block;
+    color:              rgb(0, 0, 0);
+    padding:            3px 3px 3px 3px;
+    margin:             0px;
+    min-width:          100px;    
+}
+
+.pkg-list th {
+    background-color:    rgb(255, 255, 255);
+    cursor:              pointer;
+}
+
+.pkg-list tr {
+    background-color:    rgb(255, 255, 255);
+    cursor:              pointer;
+}
+
+.pkg-list tr:hover {
+    background-color:   rgb(241, 232, 226);
+}
+

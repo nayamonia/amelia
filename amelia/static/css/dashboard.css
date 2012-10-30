@@ -1,0 +1,85 @@
+.gadget-title {
+    display:            inline-block;
+    font-size:          1.2em;
+    font-weight:        bold;
+    width:              100%;
+    text-align:         center;
+}
+
+.gadget-item-title {
+    color:              #808080;
+    font-size:          1.0em;
+}
+
+.gadget-icon {
+    position:           relative;
+    top:                4px;
+}
+
+.gadget-item-icon {
+    position:           relative;
+    top:                0px;
+}
+
+.gadget-item {
+    color:              black;
+    font-size:          1.0em;
+/*    font-weight:        bold;*/
+}
+
+.mycomp-td {
+    padding:            5px;    
+}
+
+#mem, #mount {
+    border:             1px solid gray;  
+    border-radius:      3px 3px 3px 3px;
+    box-shadow:         1pt 3px 3px #eeeeee, 0pt 0pt 0pt #000000 inset; 
+}
+
+#system{
+    position:           relative;
+    left:               0px;  
+    margin-top:         0px;  
+    margin-bottom:      20px;  
+}
+
+#mycomp-container {
+/*    background:         url('../images/mycompOpac.png') no-repeat top left;*/
+/*    background-size:    20%;*/
+}
+
+#mycomp {
+    padding:            20px;
+    width:              800px;
+    min-height:         400px;
+    margin-left:        auto;
+    margin-right:       auto;
+}
+
+#mem {
+    display:            inline-block;
+    padding:            20px;
+    width:              250px;
+    height:             100px;
+    margin:             5px;
+    background:         url('../images/memory.png') no-repeat;
+    background-size:    25%;
+    background-position: 10px 0px;
+}
+
+#mount {
+    display:            inline-block;
+    padding:            20px;
+    width:              250px;
+    height:             100px;
+    margin:             5px;
+    background:         url('../images/mount.png') no-repeat;
+    background-size:    20%;
+    background-position: 10px 5px;
+}
+
+
+.top {
+    vertical-align:     top;
+}

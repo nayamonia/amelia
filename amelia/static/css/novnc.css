@@ -1,0 +1,12 @@
+#screen {
+    float:              right;
+    padding-bottom:     5px;
+}
+
+#canvas {
+    min-width:          320px;
+    min-height:         240px;
+    width:              75%;
+    border:             0px;
+    border-radius:      8px;   
+}

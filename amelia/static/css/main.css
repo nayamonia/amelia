@@ -1,0 +1,157 @@
+body { 
+    background-color:   rgb(241, 247, 247);
+    color:              rgb(119, 133, 135);
+    font-family:        Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size:          13px;
+    list-style:         none outside none;
+    margin:             0px;
+    padding:            0px;
+    outline:            medium none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration:    none;
+}
+
+.text-link a {
+    color:              #2281CF;
+    text-decoration:    none;
+    cursor:             pointer;
+}
+
+.text-link a:hover {
+    text-decoration:    underline;
+}
+
+.align-left {
+    text-align:         left;
+}
+
+.align-right {
+    text-align:         right;
+}
+
+.align-center {
+    text-align:         center;
+}
+
+.field-text {
+    font-size:          16px;
+    padding:            5px;
+    border:             1px solid gray;  
+    border-radius:      3px 3px 3px 3px;
+    box-shadow:         0pt 0pt 0pt #000000, 0pt 3px 3px #eeeeee inset; 
+}
+
+.field-text:hover {
+    background-color:   rgb(241, 232, 226);
+}
+
+.form-title {
+    color:              rgb(89, 136, 173);
+    font-size:          1.0em;
+    font-weight:        bold;
+    word-wrap:          break-word;
+    line-height:        1.28;
+    margin-left:        24px;
+    margin-top:         10px;
+}
+
+.img-center {
+    display:            block;
+    margin-left:        auto;
+    margin-right:       auto;
+}
+
+.table-list-header {
+    display:            block;
+    font-weight:        bold;
+    font-size:          1.1em;
+    margin:             0px;
+    border-width:       0px;
+    background:         url('../images/bg_mainNavigation.png') repeat-x;
+    padding-top:        5px;    
+    padding-bottom:     5px;    
+    color:              rgb(255, 255, 255);
+    border-radius:      3px 3px 3px 3px;
+}
+
+.table-list-header-left {
+    border-top-left-radius:     3px;
+}
+
+.table-list-header-right {
+    border-top-right-radius:    3px;
+}
+
+.table-list {
+    caption-side:       bottom;
+    border-collapse:    collapse;
+    border-width:       0px;
+    border-spacing:     0px;   
+    padding:            0px;
+    margin-left:        auto;
+    margin-right:       auto;
+    width:              100%;    
+}
+
+.table-list-data {
+    display:            block;
+    color:              rgb(0, 0, 0);
+    padding:            3px 3px 3px 3px;
+    margin:             0px;
+    min-width:          70px;
+}
+
+.table-list th {
+    background-color:    rgb(255, 255, 255);
+    cursor:              pointer;
+}
+
+.table-list tr {
+    background-color:    rgb(255, 255, 255);
+    cursor:              pointer;
+}
+
+.table-list tr:hover {
+    background-color:   rgb(241, 232, 226);
+}
+
+.button {
+    font-weight:        bold;
+    float:              right;
+    font-size:          16px;
+    cursor:             pointer;
+    border-width:       0px;
+    margin:             5px;
+    color:              rgb(255, 255, 255);
+    padding:            0px 10px 0px 10px;
+/*    background:         url('../images/bg_button.png') no-repeat;
+    background-size:    100% 100%;*/
+    background-color:   rgb(248, 155, 0);
+    border-radius:      5px;
+    min-height:         30px;
+    width:              auto;
+}
+
+.button:hover {
+    /*background:         url('../images/bg_button-over.png') no-repeat;*/
+    /*background-size:    100% 100%;*/
+    color:                rgb(0, 0, 0);
+    background-color:     rgb(6, 237, 8);
+}
+
+#outer-frame {
+    width:              100%;
+    padding-bottom:     5px;
+    margin-left:        auto;
+    margin-right:       auto;
+    margin-top:         0px;
+}
+
+#button-imparch {
+    width:              200px;
+    position:           relative;
+    top:                -40px;
+    left:               150px;
+}

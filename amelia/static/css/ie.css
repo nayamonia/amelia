@@ -1,0 +1,7 @@
+.button {
+    behavior:           url('../../static/htc/csshover3.htc');
+}
+
+.curved {
+/*    behavior:           url('../../static/htc/border-radius.htc');*/
+}

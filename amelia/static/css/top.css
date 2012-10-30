@@ -1,0 +1,51 @@
+#top {
+    position:           absolute;
+    top:                0px;
+    left:               0px;
+    right:              0px;
+}
+
+#top-title {
+    color:              rgb(255, 255, 255);
+    position:           relative;
+    top:                -9px;
+    left:               10px;
+}
+
+#topbar {
+    margin-top:         0px;
+    position:           relative;
+    height:             44px;
+    top:                0px;
+    left:               0px;
+    right:              0px;
+    width:              auto;
+    background:         url('../images/bg_mainNavigation.png') repeat-x;       
+    box-shadow:         0pt 2px 2px -2px gray;
+    border-bottom:      1px solid gray;
+    border-radius:      0px 0px 6px 6px;
+    clear:              both;
+    z-index:            3;
+/*    margin-left:        20px;
+    margin-right:       20px;*/
+}
+
+#page-title {
+    margin-top:         -49px;
+    font-weight:        bold;
+    color:              rgb(255, 255, 255);  
+    font-size:          1.2em;  
+}
+
+#button-exit {
+    float:              right;
+    margin-top:         -32px;
+    padding-right:      20px;
+    z-index:            99;
+}
+
+#button-exit a {
+    font-weight:        bold;
+    color:              rgb(255, 255, 255);    
+}
+
