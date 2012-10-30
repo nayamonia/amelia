@@ -1,0 +1,113 @@
+{% import settings %}
+<div id="system">
+    <span class="table-list-header align-center">Sistema</span>
+    <table>
+        <tr>
+            <td>Sistema Operacional:</td>
+            <td><span class="form-title">{{ escape(uname[0]) }}</span></td>
+        </tr>
+        <tr>
+            <td>Nome do host:</td>
+            <td><span class="form-title">{{ escape(settings.HOSTNAME) }}</span></td>
+        </tr>
+        <tr>
+            <td>Endereço IP:</td>
+            <td><span class="form-title">{{ escape(settings.HTTP_SERVER_IP) }}</span></td>
+        </tr>
+        <tr>
+            <td>Kernel:</td>
+            <td><span class="form-title">{{ escape(uname[2]) }}</span></td>
+        </tr>
+        <tr>
+            <td>Arquitetura:</td>
+            <td><span class="form-title">{{ escape(uname[4]) }}</span></td>
+        </tr>
+     
+    </table>
+</div>
+
+<div id="uptime">
+    <span class="table-list-header align-center">Uptime</span>
+    <table>
+        <tr>
+            <td>Hora:</td>
+            <td><span class="form-title align-right">{{ escape(uptime[0]) }}</span></td>
+        </tr>
+        <tr>
+            <td>Tempo Ligado:</td>
+            <td><span class="form-title align-right">{{ escape(uptime[2].replace(",","")) }}</span></td>
+        </tr>
+        <tr>
+            <td>Carga últimos 1, 5, 15 minutos:</td>
+            <td><span class="form-title align-right">{{ escape(uptime[7]) }}
+                                         {{ escape(uptime[8]) }}
+                                         {{ escape(uptime[9]) }}</span></td>
+        </tr>
+    </table>
+</div>
+
+<div id="mem">
+    <span class="table-list-header align-center">Memória</span>
+    <table>
+        <tr>
+            <th> </th>
+            {% for title in mem_title %}
+            <th>{{ escape(title) }}</th>
+            {% end %}
+        </tr>
+        {% for mem in mem_list %}
+        <tr>
+            {% for item in mem %}
+            <td>{{ escape(item) }}</td>
+            {% end %}
+        </tr>
+        {% end %}
+    </table>
+</div>
+
+<div id="disc">
+    <span class="table-list-header align-center">Discos</span>
+    <table>
+        <tr>
+            {% for title in disc_title %}
+            <th>{{ escape(title) }}</th>
+            {% end %}
+        </tr>
+        {% for disc in disc_list %}
+        <tr>
+            <td> </td>
+            {% for item in disc %}
+            <td>{{ escape(item) }}</td>
+            {% end %}
+        </tr>
+        {% end %}
+    </table>
+</div>
+
+<div id="pci">
+    <span class="table-list-header align-center">Dispositivos PCI</span>
+    <table>
+        {% for pci in pci_list %}
+        <tr>
+            <td> </td>
+            {% for item in pci %}
+            <td>{{ escape(item) }}</td>
+            {% end %}
+        </tr>
+        {% end %}
+    </table>
+</div>
+
+<div id="usb">
+    <span class="table-list-header align-center">Dispositivos USB</span>
+    <table>
+        {% for usb in usb_list %}
+        <tr>
+            <td> </td>
+            {% for item in usb %}
+            <td>{{ escape(item) }}</td>
+            {% end %}
+        </tr>
+        {% end %}
+    </table>
+</div>

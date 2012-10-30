@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{% import settings %}
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        {% block meta-optional %}{% end %}
+        <title>
+            {% block title %}
+                {% if current_user %}
+                    {{ current_user }} -
+                {% end %}
+                {% block page_title %}
+                    {{ settings.PAGE_TITLE }} -
+                    {{ settings.IP }}
+                {% end %}                
+            {% end %}
+        </title>
+        <link rel="stylesheet" type="text/css" 
+              href="{{ static_url('css/main.css') }}" />
+        {% block script %}{% end %}        
+        <!--[if IE]>
+            <link rel="stylesheet" type="text/css" 
+                  href="{{ static_url("css/ie.css") }}" />
+        <![endif]-->        
+    </head>
+    <body>
+        <div id="outer-frame">
+        {% block body %}{% end %}
+        </div>
+    </body>
+</html>

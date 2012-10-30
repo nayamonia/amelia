@@ -1,0 +1,14 @@
+<form> 
+    {% if back %}
+    <input id="button-back" class="button" type="button" value="Voltar" 
+        onclick="history.back()"> 
+    {% end %}
+    {% if refresh %}
+    <input id="button-refresh" class="button" type="button" value="Atualizar" 
+        onclick="history.go(0)">
+    {% end %}
+    {% if forward %}
+    <input id="button-forward" class="button" type="button" value="Avancar" 
+        onclick="history.forward()">
+    {% end %}
+</form>

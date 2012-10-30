@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="align-right">
+        Atualização em <span id="time">0</span> segundos.
+        (<a href="#" onclick="pause=!pause;">parar</a>)     
+    </div>
+    {% module Process(kills=kills) %}
+{% end %}

@@ -1,0 +1,58 @@
+<div id="ps">
+    {% if kills %}
+        {% for kill in kills %}
+            <div>
+                <span class="form-title">PID {{ kill["pid"] }}</span>
+                <span class="form-title">{{ kill["status"] }}</span>
+            </div>    
+        {% end %}
+        <br />
+    {% end %}
+    <form method="post" action="{{ escape(handler.settings['uri_home']) }}/process">
+        <input class="button curved" type="submit" value="Finalizar" /><br />
+        <table>
+            <tr class="ps-header">
+                <th> </th>
+                <th><span class="">Nome do processo</span></th>
+                <th><span class="">Usuário</span></th>
+                <th><span class="">CPU %</span></th>
+                <th><span class="">PID</span></th>
+                <th><span class="">Memória</span></th>
+            </tr>
+            {% for ps in ps_list %}
+            <tr class="ps-list">
+                <td>
+                    <span class="">
+                        <input type="checkbox" name="pid" value="{{ ps["pid"] }}"/>
+                    </span>
+                </td>
+                <td>
+                    <span class="ps-list-data align-left">
+                        {{ escape(ps["name"]) }}    
+                    </span>
+                </td>
+                <td>
+                    <span class="ps-list-data align-left">
+                        {{ escape(ps["username"]) }}    
+                    </span>
+                </td>
+                <td>
+                    <span class="ps-list-data align-right">
+                        {{ escape(ps["cpu"]) }}    
+                    </span>
+                </td>
+                <td>
+                    <span class="ps-list-data align-center">
+                        {{ ps["pid"] }}
+                    </span>
+                </td>
+                <td>
+                    <span class="ps-list-data align-right">
+                        {{ escape(ps["memory"]) }}    
+                    </span>
+                </td>
+            </tr>
+            {% end %}
+        </table>
+    </form>
+</div>

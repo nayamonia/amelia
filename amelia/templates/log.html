@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block script %}
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/content.css") }}" />
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/log.css") }}" />
+{% end %}        
+{% block content %}
+    {{ log }}
+{% end %}

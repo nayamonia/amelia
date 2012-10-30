@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% import settings %}
+
+{% block script %}
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/content.css") }}" />
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/novnc.css") }}" />
+
+    <!--
+    <script type='text/javascript' 
+        src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+    -->
+    <script src="{{ static_url('novnc/vnc.js') }}"> </script>
+        
+{% end %}        
+
+{% block content %}
+    <div id="screen">
+        <div id="status" class="form-title">Carregando</div>
+        <div id="status_bar" class="status_bar"> </div>
+    </div>
+    <div align="center">
+        <canvas id="canvas" width="640px" height="20px">
+                Parece não haver suporte a Canvas.
+        </canvas>
+    </div>
+    {{ noVNC }}
+{% end %}

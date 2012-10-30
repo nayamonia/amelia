@@ -1,0 +1,52 @@
+<div id="pkg">
+<!--             <div>
+                <span class="form-title"></span>
+                <span class="form-title"></span>
+            </div>    
+        <br /> -->
+    
+        
+    {% if installeds %}
+    <form method="post" action="{{ escape(handler.settings['uri_home']) }}/software">
+        <input class="button curved" type="submit" value="Remover" /><br />
+        <table>
+            <tr class="pkg-header">
+                <th> </th>
+                <th><span class="">Grupo</span></th>
+                <th><span class="">Nome</span></th>
+                <th><span class="">Sumário</span></th>
+                <th><span class="">Tamanho</span></th>
+            </tr>
+            {% for installed in installeds %}
+            <tr class="pkg-list">
+                <td>
+                    <span class="">
+                        <input type="checkbox" name="pkg" value="{{ installed["name"] }}"/>
+                    </span>
+                </td>
+                <td>
+                    <span class="pkg-list-data align-left">
+                        {{ escape(installed["group"]) }}    
+                    </span>
+                </td>
+                <td>
+                    <span class="pkg-list-data align-left">
+                        {{ escape(installed["name"]) }}    
+                    </span>
+                </td>
+                <td>
+                    <span class="pkg-list-data align-left">
+                        {{ escape(installed["summary"]) }}    
+                    </span>
+                </td>
+                <td>
+                    <span class="pkg-list-data align-right">
+                        {{ escape(installed["size"]) }}
+                    </span>
+                </td>
+            </tr>
+            {% end %}
+        </table>
+    </form>
+    {% end %}
+</div>

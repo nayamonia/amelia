@@ -1,0 +1,27 @@
+<div id="image-browser">
+    <div id="image-browser-title" class="menu-title">Selecione um ou mais arquivos:</div><br />
+
+    <form method="post" action="{{ escape(handler.settings["uri_home"]) }}/{{ post_action }}">
+        {% for file in files %}
+        <div class="image-box">
+            <span class="image-descr-short" >
+                <input type="{{ type }}" name="files" class="files" value="{{ file['uri'] }}" />
+                {{ file['descr'] }}
+            </span>
+        </div>
+        {% end %}
+        <table id="customer-form-table">
+            <tr>
+                <td colspan="2" class="form-title align-center" >
+                </td>
+            </tr>
+            <tr>
+                <td class="align-left">
+                </td>
+                <td class="align-left">
+                    <input class="button curved" type="submit" value="Processar" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

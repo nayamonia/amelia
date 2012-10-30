@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block body %}
+    <div id="topbar">
+        {% module Top() %}        
+    </div>
+    <div id="leftbar">
+        {% module Left() %}
+    </div>
+    <div id="content">
+        {% block content %}
+<!--             {% module Content() %} -->
+            {% module Dashboard() %}
+        {% end %}
+    </div>
+ {% end %}        
+ 

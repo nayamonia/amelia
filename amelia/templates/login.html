@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block script %}
+    <link rel="stylesheet" type="text/css" 
+          href="{{ static_url("css/login.css") }}" />
+{% end %}
+
+{% block body %}
+    <div id="login-container">
+        <h2 class="align-center">{{ escape(handler.settings["site_title"]) }}</h2>
+        <form method="post" action="/login?next={{ next }}">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <input placeholder="Usuario" type="text" 
+                               value="" tabindex="1" 
+                               name="username" 
+                               class="field-text curved"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input placeholder="Senha" type="password" 
+                               value="" tabindex="1" 
+                               name="password" 
+                               class="field-text curved" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-left">
+                    </td>
+                    <td>
+                        <input class="button curved" type="submit" 
+                               name="login" value="Acessar"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+{% end %}

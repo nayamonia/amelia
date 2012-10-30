@@ -1,0 +1,90 @@
+{% extends "index.html" %}
+{% block script %}
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/content.css") }}" />
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/log.css") }}" />
+    <script type="text/javascript">
+        var i = 30;
+        var pause = false;
+        function pause() {
+            pause = !pause;
+        }
+        function count() {
+            if (!pause) {
+                document.getElementById('time').innerHTML=i;
+	            if(i == 0) {
+	        	    document.location.reload();
+	            }
+	            if (i != 0){
+	        	    i = i-1;
+	        	    setTimeout("count()", 1000);
+	            }
+	        }
+        }
+    </script>        
+{% end %}        
+{% block content %}
+	<div id="job">
+	    <div class="job-td align-right">
+	    Atualização em <span id="time">0</span> segundos. 
+	        (<a href="#" onclick="pause=!pause;" >parar</a>)
+	        (<a href="#" onclick="document.location.reload();" >atualizar</a>)
+	        <br />
+	    </div>
+	    {% if not status %}
+    		<table class="table-list">
+                <tr>
+                    <th class="table-list-header">Executando</th>
+                </tr>
+    			{% for thread in jobs_alive %}
+    				<tr class="table-list-data">
+    				{% for k, v in thread.items() %}
+    					<td class="job-td field-text align-center">
+    						{% if k == "URI" %}
+    							<a href="/job/{{ v }}">{{ v }}</a>
+    						{% else %}	
+    							{{ v }}
+    						{% end %}						
+    					</td>
+    				{% end %}
+    				</tr>
+    			{% end %}
+            </table>
+            <br /><br />
+            <table class="table-list">
+                <tr><th class="table-list-header">Finalizado</th></tr>
+    			{% for thread in jobs_ended %}
+    				<tr class="table-list-data">
+    				{% for k, v in thread.items() %}
+    					<td class="job-td field-text align-center">
+    						{% if k == "URI" %}
+    							<a href="/job/{{ v }}">{{ v }}</a>
+    						{% else %}	
+    							{{ v }}
+    						{% end %}						
+    					</td>
+    				{% end %}
+    				</tr>
+    			{% end %}
+    		</table>
+    	{% else %}
+    		<table class="table-list">
+                <tr>
+                    <td class="table-list-header align-center">Estado atual do serviço</td>
+                </tr>
+				<tr class="table-list-data">
+					<td class="job-td field-text padlog  align-center">
+					    <span class="field-text padlog">
+                	       <br />{{ status }}<br /><br />
+                	    </span>
+					</td>
+				</tr>
+    		</table>
+    	{% end %}
+	</div>
+	<script>
+	    count();
+	</script>
+{% end %}
+

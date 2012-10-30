@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% import settings %}
+{% block script %}
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/content.css") }}" />
+    <link rel="stylesheet" type="text/css" 
+        href="{{ static_url("css/console.css") }}" />
+{% end %}        
+
+{% block content %}
+    <iframe id="console-box" src="http://{{ escape(settings.IP) }}:4200/"> 
+    </iframe>
+{% end %}

@@ -1,0 +1,5 @@
+{% import settings %}
+
+{% for menu_item in settings.MENU %}
+    {% module MenuItem(menu_item) %}
+{% end %}

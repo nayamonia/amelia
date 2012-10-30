@@ -1,0 +1,107 @@
+{% import settings %}
+<div id="mycomp-container">
+    <div id="mycomp">
+        <div id="system">
+            <table>
+                <tr class="">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Nome do dispositivo</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/hostname.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ escape(hostname) }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Ligado em</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/system_time.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ escape(boot) }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Processador</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/processor.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ escape(cpu) }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Memória</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/memory.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ escape(mem) }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Disco</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/hdd.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ escape(disk) }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Tipo de OS</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/64_bit.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ escape(arch) }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Placa Mãe</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/motherboard.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ escape(baseboard) }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right">
+                        <span class="gadget-item-title">Porta Serial</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/port.png') }}" />
+                        <span class="gadget-item gadget-item-icon">{{ serial }}</span></td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right top">
+                        <span class="gadget-item-title">Dispositivos PCI</span></td>
+                    <td><img class="gadget-icon" src="{{ static_url('images/pci.png') }}" />
+                        <table>
+                            {% for dev in pci %}
+                            <tr>
+                                <td>
+                                    <span class="gadget-item">
+                                        {{ escape(dev["vendor"]) }}
+                                        {{ escape(dev["device"]) }}
+                                    </span>
+                                </td>
+                            </tr>        
+                            {% end %}
+                        </table>
+                    </td>
+                </tr>
+                <tr class="mycomp-tr">
+                    <td class="mycomp-td align-right top">
+                        <span class="gadget-item-title">Dispositivos USB</span></td>
+                    <td>
+                        <table>
+                            {% for dev in usb %}
+                            <tr>
+                                <td>
+                                    <span class="gadget-item">
+                                        {{ escape(dev["device"]) }}
+                                    </span>
+                                </td>
+                            </tr>        
+                            {% end %}
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+<!--         <div id="mem">
+            <span class="gadget-title">Memória</span>
+        </div>
+        
+        <div id="mount">
+            <span class="gadget-title">Discos</span>
+        </div>
+        
+        <div id="pci">
+            <span class="gadget-title">Dispositivos PCI</span>
+        </div>
+        
+        <div id="usb">
+            <span class="gadget-title">Dispositivos USB</span>
+        </div> --> 
+    </div>
+</div>
