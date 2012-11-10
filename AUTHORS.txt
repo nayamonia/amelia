@@ -1,0 +1,4 @@
+Authors ordered by first contribution.
+
+Gabriel Fernandes <gabriel@duel.com.br>
+Alexandre Cardoso Martins <alexandrecmartins86@gmail.com>
