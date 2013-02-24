@@ -43,10 +43,11 @@
         {% end %}
     {% end %}
     {% if current_file and content_file %}
-    <form method="post" action="/conf"> 
+    <a href="/conf"><span class="button">Lista de arquivos</span></a>
+    <form method="post" action="/conf/{{ current_profile }}/{{ current_file['name'] }}"> 
     	<input type="hidden" name="current-file" value="{{ current_file['path'] }}/{{ current_file['name'] }}"/>
         <input class="button" type="submit" value="Salvar" /><br /> 
-		<span class="content-title">{{ current_file['path'] }}/{{ current_file['name'] }}</span>
+        <span class="content-title">{{ current_file['path'] }}/{{ current_file['name'] }}</span>
         <textarea id="content-file" name="content-file" >
         	{{ content_file }}
         </textarea>

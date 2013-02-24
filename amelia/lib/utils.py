@@ -61,11 +61,11 @@ def cmdexec(cmd):
     out, error = p.communicate()
     return out, error
 
-def getFileList(path, ext):
+def getFileList(path, ext=False):
     file_list = []
     files = os.listdir(os.path.dirname(path))
     for item in files:
-        if (".%s" % ext).upper() in item.upper() and \
+        if ((".%s" % ext).upper() in item.upper() or not ext) and \
             not item.startswith("__") and \
             not item.startswith("."):
             file_list.append(item)
