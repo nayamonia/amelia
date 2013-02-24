@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block content %}
+	{% if msg %}
+	<script type="text/javascript">
+		alert ("Esta é uma caixa de diálogo ALERT do JavaScript!")
+	</script>
+		alert({{ msg }})
+	{% end %}
+    {% module Conf(params=params) %}
+{% end %}

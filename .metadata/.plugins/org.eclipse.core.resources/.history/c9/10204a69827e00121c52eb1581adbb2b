@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+
+{% block content %}
+	{% if msg %}
+		{{ msg }}
+	{% %}
+    {% module Conf(params=params) %}
+{% end %}
