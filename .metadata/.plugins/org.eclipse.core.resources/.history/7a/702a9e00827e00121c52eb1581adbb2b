@@ -1,5 +1,0 @@
-{% extends "index.html" %}
-
-{% block content %}
-    {% module Conf(params=params) %}
-{% end %}
