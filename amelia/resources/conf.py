@@ -32,15 +32,19 @@ class ConfHandler(main.BaseHandler):
     @web.authenticated
     def get(self, params=False):
         settings.PAGE_TITLE = "Configuração"
-        self.render("conf.html", params=params)
+        self.render("conf.html", params=params, msg=False)
     
     @web.authenticated    
     def post(self, params=False):
         settings.PAGE_TITLE = "Configuração"
-        content_file = self.get_argument("content-file", False)
-        if content_file:
-            current_file = self.get_argument("current-file", False)
-            saveFile(content_file, current_file)
+        try:
+            content_file = self.get_argument("content-file", False)
+            if content_file:
+                current_file = self.get_argument("current-file", False)
+                saveFile(content_file, current_file)
+                msg = "Arquivo %s salvo com sucesso!" % current_file
+        except Exception, e:
+            msg = "Erro ao salvar %s:\n%s" % (current_file, e)
 
-        self.render("conf.html", params=params)
+        self.render("conf.html", params=params, msg=msg)
 

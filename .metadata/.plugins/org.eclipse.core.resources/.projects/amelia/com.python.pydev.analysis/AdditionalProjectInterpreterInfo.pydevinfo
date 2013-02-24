@@ -54,9 +54,9 @@ resources.log|0|/home/gabriel/Workspaces/Amelia/amelia/resources/log.py
 42=HomeHandler
 6=resources.cmd
 14=resources.logout
-28=ContentModule
+29=ContentModule
 39=SoftwareHandler
-29=DashboardModule
+28=DashboardModule
 40=LogoutHandler
 18=resources.novnc
 7=profiles.zanthus2
@@ -123,7 +123,7 @@ ver|1|VERSION!11@
 __i|1|__init__!25&18@
 _li|1|_list_thread_kill!26&19@
 add|1|add_thread_history!26&18@
-css|7|css_files!27&194@css_files!28&66@css_files!29&82@css_files!30&74@css_files!31&154@css_files!32&98@css_files!33&170@
+css|7|css_files!27&194@css_files!28&82@css_files!29&66@css_files!30&74@css_files!31&154@css_files!32&98@css_files!33&170@
 emb|2|embedded_javascript!33&170@embedded_javascript!31&154@
 get|15|get!34&42@get!35&146@get_thread!26&18@get!36&162@get!37&106@get!38&50@get!39&186@get_current_user!26&18@get!40&114@get!41&90@get!42&18@get_thread_ended!26&18@get!43&122@get_thread_list!26&18@get_thread_history!26&18@
 htt|1|HTTPError!26&18@
@@ -132,7 +132,7 @@ lis|1|listaURIs!25&19@
 par|2|params!44&91@params!45&75@
 pos|3|post!39&186@post!36&162@post!37&106@
 ref|1|RefreshHandlers!25&18@
-ren|9|render!33&170@render!32&98@render!31&154@render!28&66@render!46&138@render!29&82@render!27&194@render!30&74@render!47&130@
+ren|9|render!33&170@render!32&98@render!31&154@render!29&66@render!46&138@render!28&82@render!27&194@render!30&74@render!47&130@
 sup|1|SUPPORTED_METHODS!26&19@
 thr|1|thread_ident!26&18@
 uri|4|uri_sufix!36&163@uri_sufix!35&147@uri_sufix!41&91@uri_sufix!39&187@
