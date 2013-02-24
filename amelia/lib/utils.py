@@ -1,5 +1,5 @@
 # encoding: utf-8
-verificar codigo nao usado
+#verificar codigo nao usado
 """
 The MIT License (MIT)
 

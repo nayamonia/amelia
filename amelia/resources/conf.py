@@ -21,6 +21,7 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
+from lib.utils import saveFile
 from tornado import web
 import main
 import settings
@@ -31,5 +32,15 @@ class ConfHandler(main.BaseHandler):
     @web.authenticated
     def get(self, params=False):
         settings.PAGE_TITLE = "Configuração"
+        self.render("conf.html", params=params)
+    
+    @web.authenticated    
+    def post(self, params=False):
+        settings.PAGE_TITLE = "Configuração"
+        content_file = self.get_argument("content-file", False)
+        if content_file:
+            current_file = self.get_argument("current-file", False)
+            saveFile(content_file, current_file)
+
         self.render("conf.html", params=params)
 

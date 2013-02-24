@@ -89,7 +89,7 @@ class DashboardModule(tornado.web.UIModule):
         try:
             serial_ports = cmdexec('dmesg | grep -i tty | grep "^0"')
             serial_ports = serial_ports[0].split('\n')
-            serial_ports = len(serial_ports)
+            serial_ports = len(serial_ports)-1
         except:
             serial_ports = "Não disponível"
             

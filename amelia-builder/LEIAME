@@ -1,0 +1,16 @@
+#Tentativa 1
+
+#adicionar EPEL
+yum install http://epel.gtdinternet.com/6/i386/epel-release-6-7.noarch.rpm
+
+#pungi 2.0.22
+yum install  http://kojipkgs.fedoraproject.org/packages/pungi/2.0.22/1.fc13/noarch/pungi-2.0.22-1.fc13.noarch.rpm
+
+#patch pra anaconda
+#yum install patch
+
+# arquivo ks faltando "--" no parametro "mirrorlist"
+
+-------------------------------------------------------------
+
+
