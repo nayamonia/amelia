@@ -9,6 +9,9 @@
     <div id="page-title" class="align-center">{{ settings.PAGE_TITLE }}</div>
         
     <div id="button-exit" class="text-link">
-        <a href="/logout"><h3>Sair</h3></a>
+    	<a href="/restart" title="Reiniciar"><img src="{{ static_url('images/update.png') }}" /></a>
+    	<a href="/shutdown" title="Desligar"><img src="{{ static_url('images/switch.png') }}" /></a>
+    	&nbsp;&nbsp;&nbsp;
+    	<a href="/logout" title="Sair"><img src="{{ static_url('images/door_in.png') }}" /></a>
     </div>
 </div>

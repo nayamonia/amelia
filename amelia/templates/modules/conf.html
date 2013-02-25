@@ -25,7 +25,7 @@
     {% if file_list and current_profile and not content_file %}
         {% for file in file_list %}
         <div class="box">
-            <a href="/conf/{{ current_profile }}/{{ file['name'] }}" >
+            <a href="/conf/{{ current_profile }}/{{ file['name'] }}" title="Clique para visualizar/editar">
                 <span class="box-img">
                     <img src="{{ static_url('images/config_file.png') }}" />
                 </span>
@@ -43,11 +43,15 @@
         {% end %}
     {% end %}
     {% if current_file and content_file %}
-    <a href="/conf"><span class="button">Lista de arquivos</span></a>
+    <a href="/conf">
+    	<img src="{{ static_url('images/column_four.png') }}" />
+    	<br />
+    	<span class="box-name">Perfis</span>
+    </a>
     <form method="post" action="/conf/{{ current_profile }}/{{ current_file['name'] }}"> 
     	<input type="hidden" name="current-file" value="{{ current_file['path'] }}/{{ current_file['name'] }}"/>
         <input class="button" type="submit" value="Salvar" /><br /> 
-        <span class="content-title">{{ current_file['path'] }}/{{ current_file['name'] }}</span>
+        <span class="content-title">{{ current_file['path'] }}{{ current_file['name'] }}</span>
         <textarea id="content-file" name="content-file" >
         	{{ content_file }}
         </textarea>

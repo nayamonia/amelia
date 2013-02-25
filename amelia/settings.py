@@ -28,14 +28,14 @@ from ui_modules.dashboard import DashboardModule
 from ui_modules.left import LeftModule
 from ui_modules.menuitem import MenuItemModule
 from ui_modules.navigate import NavigateModule
-from ui_modules.packages import PackagesModule
+#from ui_modules.packages import PackagesModule
 from ui_modules.process import ProcessModule
 from ui_modules.top import TopModule
 import logging
 import os
 import socket
 
-VERSION = "0.1"
+VERSION = "1.4"
 
 IP = socket.gethostbyname(socket.gethostname())
 HOSTNAME = socket.gethostname()
@@ -54,7 +54,7 @@ MENU= [{"DESCRIPTION" : "Início", "URI" : "/", "IMG" : "mycomp32.png"},
        {"DESCRIPTION" : "Display", "URI" : "/novnc/?true_color=0", "IMG" : "display32.png"}, 
        {"DESCRIPTION" : "Processos", "URI" : "/process" , "IMG" : "task32.png"}, 
        {"DESCRIPTION" : "Configurar", "URI" : "/conf", "IMG" : "conf32.png"}, 
-       {"DESCRIPTION" : "Pacotes", "URI" : "/software", "IMG" : "pkg32.png"}, 
+#       {"DESCRIPTION" : "Pacotes", "URI" : "/software", "IMG" : "pkg32.png"}, 
        {"DESCRIPTION" : "Terminal", "URI" : "/console", "IMG" : "terminal32.png"}, 
        {"DESCRIPTION" : "Jobs", "URI" : "/job", "IMG" : "jobs32.png"}, 
        {"DESCRIPTION" : "Logs", "URI" : "/log", "IMG" : "log32.png"},] 
@@ -67,7 +67,7 @@ UI_MODULES = {
               "Content" : ContentModule,
               "Dashboard" : DashboardModule,
               "Process" : ProcessModule,
-              "Packages": PackagesModule,
+#              "Packages": PackagesModule,
               "Conf": ConfModule,
              }
 
@@ -76,7 +76,7 @@ SETTINGS = dict(
                                              "templates"),
                 static_path = os.path.join(os.path.dirname(__file__), 
                                            "static"),
-                site_title = "Amelia BETA", 
+                site_title = "APOS %s" % VERSION, 
                 login_url = "/login",
                 cookie_secret = "77XvAF5TTj2TxQ5ZAU+p4HYuYyoIf0EIuuo6cKCHKnQ=",
                 autoescape = None,
@@ -85,7 +85,7 @@ SETTINGS = dict(
                 uri_home = HTTP_URI_HOME, 
                )
 
-LOGFILE = getFilenamePath('/tmp/linos.log')          
+LOGFILE = getFilenamePath('/tmp/apos.log')          
 logging.basicConfig(
                     level = logging.DEBUG,
                     format = '%(asctime)s : %(levelname)s : %(message)s',

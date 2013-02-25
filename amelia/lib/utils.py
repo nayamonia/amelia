@@ -29,6 +29,7 @@ import os
 import platform
 import time
 import subprocess
+import mimetypes
 
 SUFFIXES = {1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
             1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']}
@@ -60,6 +61,23 @@ def cmdexec(cmd):
                          shell=True)
     out, error = p.communicate()
     return out, error
+
+def getIFileList(path, ext=False):
+    file_list = []
+    dir_list = [] 
+    files = os.listdir(os.path.dirname(path))
+    for item in files:
+        if ((".%s" % ext).upper() in item.upper() or not ext) and \
+            not item.startswith("__") and \
+            not item.startswith("."):
+            if not os.path.isdir(os.path.dirname(path) + "/" + item):
+                mime_type = mimetypes.guess_type(item)[0]
+                if not mime_type:
+                    mime_type = "plaintext/binary"
+                file_list.append((item, mime_type))
+            else:
+                dir_list.append((item, "dir"))
+    return tuple(dir_list), tuple(file_list)
 
 def getFileList(path, ext=False):
     file_list = []

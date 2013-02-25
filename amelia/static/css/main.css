@@ -141,6 +141,14 @@ a:link, a:visited, a:hover, a:active {
     background-color:     rgb(6, 237, 8);
 }
 
+.button-save {
+	background: 		none;
+	background: 		url('../images/save_as.png') no-repeat;
+    background-size:    100% 100%;
+    width: 				32px;
+    height: 			32px;
+}
+
 #outer-frame {
     width:              100%;
     padding-bottom:     5px;
