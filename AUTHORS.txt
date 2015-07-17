@@ -1,5 +1,4 @@
 Authors ordered by first contribution.
 
 Gabriel Fernandes <gabriel@duel.com.br>
-teste
 Pierre Santana <pierresantana@gmail.com>
